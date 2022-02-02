@@ -1,3 +1,4 @@
+print("This program checks if a year is a leap year \n")
 userInput = int(input("What year are you checking for?: ")) # getting user input
 if(userInput % 100 == 0): # checking divisible by 100 case
     if(userInput % 400 == 0): # checking for if it is also divisible by 400
