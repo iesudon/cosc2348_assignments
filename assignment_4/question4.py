@@ -30,6 +30,6 @@ def main():
     print("Original list: " + str(list))
     newList = removeRepeatingNumbers(list,100)
     print("New list: " + str(newList))
-    print(secondHighestOfList(list, size))
+    print("Second highest" + str(secondHighestOfList(list, size)))
     
 main()
