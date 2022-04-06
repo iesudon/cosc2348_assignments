@@ -1,3 +1,4 @@
+#!/bin/bash
 val_1=100
 val_2=10
 val_3=67
