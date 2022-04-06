@@ -25,7 +25,4 @@ fi
 home_rent_allowance=$((home_rent_allowance_percent * salary))
 dearness_allowance=$((dearness_allowance_percent * salary))
 gross_salary=$((home_rent_allowance + dearness_allowance + salary))
-echo $salary
-echo $dearness_allowance
-echo $home_rent_allowance
-echo $gross_salary
+echo "The gross salary is $gross_salary"
