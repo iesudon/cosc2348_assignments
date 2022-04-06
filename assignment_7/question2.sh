@@ -1,3 +1,4 @@
+#!/bin/bash
 NAME="Cameron Trainer"
 COURSE1="First Year Seminar II"
 COURSE2="Introduction to Scripting"
