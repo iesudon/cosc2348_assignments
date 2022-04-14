@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#first uploaded on the 12th
 goal=50
 start=2
 for i in $(seq $start $goal)
