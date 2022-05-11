@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-11T13:01:47.600Z" agent="5.0 (X11)" etag="49b5zmEvbmrXbAvHvtJA" version="18.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-11T13:02:10.300Z" agent="5.0 (X11)" etag="ZuvYAOtZk7-0n0xpTZH3" version="18.0.3" type="github">
   <diagram id="fetL5gzYO9fl1kKE9Upe" name="Page-1">
     <mxGraphModel dx="1422" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -51,11 +51,11 @@
         <mxCell id="k4AF4Bed6HhczU2TGuJx-11" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
           <mxGeometry x="250" y="720" width="230" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="k4AF4Bed6HhczU2TGuJx-12" value="Create 3 players" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="k4AF4Bed6HhczU2TGuJx-11">
-          <mxGeometry x="30" y="10" width="110" height="20" as="geometry" />
+        <mxCell id="k4AF4Bed6HhczU2TGuJx-12" value="Create 3 players in the player list" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="k4AF4Bed6HhczU2TGuJx-11">
+          <mxGeometry x="15" y="20" width="200" height="20" as="geometry" />
         </mxCell>
         <mxCell id="k4AF4Bed6HhczU2TGuJx-13" value="Print &quot;There are three players at this table&quot;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="k4AF4Bed6HhczU2TGuJx-11">
-          <mxGeometry x="-30" y="50" width="260" height="20" as="geometry" />
+          <mxGeometry x="-15" y="50" width="260" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
