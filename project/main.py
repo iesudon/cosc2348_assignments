@@ -16,7 +16,7 @@ class Player():
         self.__out = False
         self.__zeroCounter = 0
         self.resetAttrs()
-        self.__bank = random.randint(50, 100)
+        self.__bank = random.randint(500, 5000)
     def resetAttrs(self):
         self.__score = 0
         self.__standFlag = False
@@ -69,13 +69,17 @@ class Player():
 class Dealer():
     #initializing shoe
     def __init__(self,shoe):
+        self.hand = []
         self.resetattrs()
-        self.__shoe = shoe
     #initializing dealers cards, score and bust flag
     def resetattrs(self):
-        self.__dealerCards = []
+        self.hand = []
         self.__score = 0
         self.__bustFlag = False
+    def setHand(self,card):
+        self.__hand.append(card)
+    def getHand(self): #dealer class
+        return self.__hand
 
 def createDeck(): #The deck creator, shoe class
     deck=['sa','s2','s3','s4','s5','s6','s7','s8','s9','s1','sj','sq','sk', 
@@ -83,8 +87,8 @@ def createDeck(): #The deck creator, shoe class
                 'ca','c2','c3','c4','c5','c6','c7','c8','c9','c1','cj','cq','ck',
                 'da','d2','d3','d4','d5','d6','d7','d8','d9','d1','dj','dq','dk']
     return deck
-def cardValuer(card, cardN ,currentGame): #shoe class
-    if(card[cardN][1]=='a'): #if this returns 0, it will prompt the user to choose either 1 or 11
+def cardValuer(hand, cardN ,currentGame): #shoe class
+    if(hand[cardN][1]=='a'): #if this returns 0, it will prompt the user to choose either 1 or 11
         if(currentGame > 1):
             value = int(input("Enter either 1 or 11"))
             while (value != 1 or value != 11):
@@ -92,10 +96,10 @@ def cardValuer(card, cardN ,currentGame): #shoe class
             return value
         else:
             return 1
-    elif(card[cardN][1]!='a' and card[cardN][1].isalpha() or card[cardN][1]=='1'): #this is last incase it tries to make the ace equal to 1 or 11
+    elif(hand[cardN][1]!='a' and hand[cardN][1].isalpha() or hand[cardN][1]=='1'): #this is last incase it tries to make the ace equal to 1 or 11
         return 10
     else:
-        return int(card[cardN][1])
+        return int(hand[cardN][1])
 def createShoe(): #shoe class
     shoe=[]
     for i in range(0,NUMDECKS):
@@ -154,17 +158,20 @@ def setPlayers(shoe,currentCard, currentDeck):
 def main():
     shoe=createShoe()
     dealer = Dealer(shoe)
-    gameFlag = True
+    tableFlag = True
     currentDeck = 0
     currentCard = 0
     currentGame = 1
-    while gameFlag == True:
+    while tableFlag == True:
         print ("There are three players at this table")
         for i in range (0,3):
             players = setPlayers(shoe,currentCard,currentDeck)
-            print("Player " + str(i) + ": \n" + str(handNamer(players[i].getHand(),currentGame)))
-            print("Value = " + cardValuer(players[i].getHand(),))
-        gameFlag = False
+            print("Player " + str(i+1) + ": \n" + str(handNamer(players[i].getHand(),currentGame)) 
+                  + " Value:" + str(cardValuer(players[i].getHand(),0,currentGame)))
+            while gameFlag == true:
+                while roundFlag == true and roundCount >=1:
+                    
+        tableFlag = False
         if (currentCard%52==0):
             currentDeck+=1
         if (currentCard == MAXCARDS and currentDeck == 3):
