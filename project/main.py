@@ -69,7 +69,7 @@ class Player():
 class Dealer():
     #initializing shoe
     def __init__(self,shoe):
-        self.hand = []
+        self.__hand = []
         self.resetattrs()
     #initializing dealers cards, score and bust flag
     def resetattrs(self):
