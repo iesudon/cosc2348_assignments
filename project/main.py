@@ -38,7 +38,7 @@ class Player():
     def doubleDown(self):
         self.__currentBet *= 2
         self.setStand()
-    def lostBet(self):
+    def setLostBet(self):
         self.__bank -= self.getBet()
     def regularWin(self):
         self.__bank += self.getBet()
